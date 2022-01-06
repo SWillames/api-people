@@ -1,4 +1,4 @@
-package com.sw.peopleapi.service;
+package com.sw.peopleapi.services;
 
 import com.sw.peopleapi.entities.Person;
 
