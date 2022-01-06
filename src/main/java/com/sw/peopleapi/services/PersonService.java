@@ -1,13 +1,16 @@
 package com.sw.peopleapi.services;
 
+import com.sw.peopleapi.dto.request.PersonDTO;
+import com.sw.peopleapi.dto.response.MessageResponseDTO;
 import com.sw.peopleapi.entities.Person;
+import com.sw.peopleapi.exception.PersonNotFoundException;
 
 import java.util.List;
 
 public interface PersonService {
-    public Person createPerson(Person person);
-    public Person findById(Long id);
-    public List<Person> listAll();
-    public Person updatePersn(Long id);
-    public void deletePerson(Long id);
+    public MessageResponseDTO createPerson(PersonDTO personDTO);
+    public PersonDTO findById(Long id) throws PersonNotFoundException;
+    public List<PersonDTO> listAll();
+    public MessageResponseDTO updatePerson(Long id, PersonDTO personDTO) throws PersonNotFoundException;
+    public void deletePerson(Long id) throws PersonNotFoundException;
 }
