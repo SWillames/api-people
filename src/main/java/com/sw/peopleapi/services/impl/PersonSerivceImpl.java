@@ -1,5 +1,6 @@
 package com.sw.peopleapi.services.impl;
 
+import com.sw.peopleapi.dto.response.MessageResponseDTO;
 import com.sw.peopleapi.entities.Person;
 import com.sw.peopleapi.repositories.PersonRepository;
 import com.sw.peopleapi.services.PersonService;
@@ -39,5 +40,11 @@ public class PersonSerivceImpl implements PersonService {
     @Override
     public void deletePerson(Long id) {
 
+    }
+
+    private MessageResponseDTO createMessageResponse(String s, Long id) {
+        return MessageResponseDTO.builder()
+                .message(s + id)
+                .build();
     }
 }
