@@ -1,8 +1,8 @@
-package com.sw.peopleapi.service.impl;
+package com.sw.peopleapi.services.impl;
 
 import com.sw.peopleapi.entities.Person;
 import com.sw.peopleapi.repositories.PersonRepository;
-import com.sw.peopleapi.service.PersonService;
+import com.sw.peopleapi.services.PersonService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
